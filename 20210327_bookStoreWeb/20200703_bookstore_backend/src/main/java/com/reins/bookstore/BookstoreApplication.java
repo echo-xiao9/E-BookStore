@@ -49,14 +49,9 @@ public class BookstoreApplication {
     public static void main(String[] args) {
         // Launch the application
         ConfigurableApplicationContext context = SpringApplication.run(BookstoreApplication.class, args);
-
         JmsTemplate jmsTemplate = context.getBean(JmsTemplate.class);
         indexFiles = new IndexFiles();
         indexFiles.updateIndexFiles();
-        // Send a message with a POJO - the template reuse the message converter
-//        System.out.println("Sending an email message.");
-//		jmsTemplate.convertAndSend("mailbox", new Email("info@example.com", "Hello"));
-//        SpringApplication.run(BookstoreApplication.class, args);
     }
 
 }
