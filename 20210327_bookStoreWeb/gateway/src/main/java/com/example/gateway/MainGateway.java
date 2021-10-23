@@ -29,7 +29,7 @@ public class MainGateway {
                         .uri("lb://BOOK-SERVICE")
                 ).route(r->r.path("/user/**")
                         .filters(f->f.rewritePath("/user",""))
-                        .uri("lb://USER-AUTH")
+                        .uri("lb://OTHER-SERVICE")
                 )
                 .build();
     }
