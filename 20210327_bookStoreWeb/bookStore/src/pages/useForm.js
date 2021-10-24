@@ -24,7 +24,7 @@ const useForm = (callback, validate) => {
         }
         axios({
             method: 'GET',
-            url: 'http://localhost:9090/login',
+            url: 'https://localhost:9090/login',
             params: {
                 username: values.username,
                 password: values.password
@@ -50,7 +50,7 @@ const useForm = (callback, validate) => {
 
                     <script type="text/javascript">
                         function jumurl(){
-                        window.location.href = 'http://localhost:3000'
+                        window.location.href = 'https://localhost:3000'
                     }
                         setTimeout(jumurl,3000);
                     </script>

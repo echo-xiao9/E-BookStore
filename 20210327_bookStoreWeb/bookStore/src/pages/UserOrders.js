@@ -24,7 +24,7 @@ export default class Orders extends React.Component {
             alert("please log in!");
             <script type="text/javascript">
                 function jumurl(){
-                window.location.href = 'http://localhost:3000/login'
+                window.location.href = 'https://localhost:3000/login'
             }
                 setTimeout(jumurl,3000);
             </script>
@@ -32,7 +32,7 @@ export default class Orders extends React.Component {
 
         axios({
             method: 'GET',
-            url: 'http://localhost:9090/getUserOrders',
+            url: 'https://localhost:9090/getUserOrders',
             params: {
                 user_id: localStorage.getItem('userId')
             }
@@ -65,7 +65,7 @@ export default class Orders extends React.Component {
             console.log(line);
             axios({
                 method: 'GET',
-                url: 'http://localhost:9090/getOrderItem',
+                url: 'https://localhost:9090/getOrderItem',
                 params: {
                     order_id: line.orderId
                 }
@@ -113,7 +113,7 @@ export default class Orders extends React.Component {
 
         axios({
             method: 'GET',
-            url: 'http://localhost:9090/getUserBookOrders',
+            url: 'https://localhost:9090/getUserBookOrders',
             params: {
                 user_id: localStorage.getItem('userId'),
                 bookName: this.state.bookName,
@@ -131,7 +131,7 @@ export default class Orders extends React.Component {
     reset = () => {
         axios({
             method: 'GET',
-            url: 'http://localhost:9090/getUserOrders',
+            url: 'https://localhost:9090/getUserOrders',
             params: {
                 user_id: localStorage.getItem('userId')
             }
@@ -193,7 +193,7 @@ export default class Orders extends React.Component {
 
         axios({
             method: 'GET',
-            url: 'http://localhost:9090/getUserDateOrder',
+            url: 'https://localhost:9090/getUserDateOrder',
             params: {
                 user_id: localStorage.getItem("userId"),
                 from: newFrom,

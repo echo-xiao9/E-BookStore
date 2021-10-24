@@ -23,7 +23,7 @@ export default class HotUsers extends React.Component {
 
         axios({
             method: 'GET',
-            url: 'http://localhost:9090/getHotUsers',
+            url: 'https://localhost:9090/getHotUsers',
             params: {
                 from: this.state.from,
                 to: this.state.to
@@ -47,7 +47,7 @@ export default class HotUsers extends React.Component {
     getHotUser = () => {
         axios({
             method: 'GET',
-            url: 'http://localhost:9090/getHotUsers',
+            url: 'https://localhost:9090/getHotUsers',
             params: {
                 from: this.state.from,
                 to: this.state.to

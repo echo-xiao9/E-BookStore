@@ -85,7 +85,7 @@ export default class Register extends React.Component {
     checkUsername() {
         axios({
             method: 'GET',
-            url: "http://localhost:9090/getUserByName",
+            url: "https://localhost:9090/getUserByName",
             params: {
                 username: this.state.username
             }
@@ -105,7 +105,7 @@ export default class Register extends React.Component {
             this.state.pswValid === 1) {
             axios({
                 method: 'GET',
-                url: "http://localhost:9090/addUser",
+                url: "https://localhost:9090/addUser",
                 params: {
                     username: this.state.username,
                     password: this.state.psw,
@@ -115,7 +115,7 @@ export default class Register extends React.Component {
                 alert("Registration successful! Please log in.");
                 <script type="text/javascript">
                     function jumurl(){
-                    window.location.href = 'http://localhost:3000/login'
+                    window.location.href = 'https://localhost:3000/login'
                 }
                     setTimeout(jumurl,3000);
                 </script>

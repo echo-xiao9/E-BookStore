@@ -24,7 +24,7 @@ export default class HotSelling extends React.Component {
 
         axios({
             method: 'GET',
-            url: 'http://localhost:9090/getUserHotSelling',
+            url: 'https://localhost:9090/getUserHotSelling',
             params: {
                 from: this.state.from,
                 to: this.state.to,
@@ -50,7 +50,7 @@ export default class HotSelling extends React.Component {
     getHotUser = () => {
         axios({
             method: 'GET',
-            url: 'http://localhost:9090/getUserHotSelling',
+            url: 'https://localhost:9090/getUserHotSelling',
             params: {
                 from: this.state.from,
                 to: this.state.to,

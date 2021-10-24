@@ -77,7 +77,7 @@ export default class Excel extends React.Component {
 
         axios({
             method: 'GET',
-            url: 'http://localhost:9090/changeBook',
+            url: 'https://localhost:9090/changeBook',
             params: {
                 id: data[this.state.edit.row][0],
                 isbn: data[this.state.edit.row][1],
@@ -152,7 +152,7 @@ export default class Excel extends React.Component {
     };
 
     getBooks = () => {
-        fetch("http://localhost:9090/adminBook")
+        fetch("https://localhost:9090/adminBook")
             .then(response => response.json())
             .then(data => {
                 this.setState({
@@ -165,7 +165,7 @@ export default class Excel extends React.Component {
     }
 
     saveBooks = () => {
-        fetch("http://localhost:9090/adminBook")
+        fetch("https://localhost:9090/adminBook")
             .then(response => response.json())
             .then(data => {
                 this.setState({
@@ -220,7 +220,7 @@ export default class Excel extends React.Component {
         this.render();
         axios({
             method: 'post',
-            url: 'http://localhost:9090/books',
+            url: 'https://localhost:9090/books',
             params: {
                 isbn: newBook[1],
                 name: newBook[2],
@@ -260,7 +260,7 @@ export default class Excel extends React.Component {
         console.log("target:");
         console.log(this.state.deleteTarget);
         if (flag === 1) {
-            axios.delete('http://localhost:9090/books', {
+            axios.delete('https://localhost:9090/books', {
                 params: {
                     bookId: this.state.deleteTarget
                 }

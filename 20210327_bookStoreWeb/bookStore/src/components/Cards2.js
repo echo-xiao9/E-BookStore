@@ -26,7 +26,7 @@ export default class Orders extends React.Component {
         })
         axios({
             method: 'GET',
-            url: 'http://localhost:9090/books',
+            url: 'https://localhost:9090/books',
             params: {
                 page: props.props
             }
@@ -46,7 +46,7 @@ export default class Orders extends React.Component {
         console.log(this.state.page);
         axios({
             method: 'GET',
-            url: 'http://localhost:9090/books',
+            url: 'https://localhost:9090/books',
             params: {
                 page: this.state.page
             }
@@ -70,7 +70,7 @@ export default class Orders extends React.Component {
     search() {
         axios({
             method: 'GET',
-            url: 'http://localhost:9090/books',
+            url: 'https://localhost:9090/books',
             params: {
                 query: this.state.targetBookName
             }

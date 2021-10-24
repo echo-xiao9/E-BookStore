@@ -20,7 +20,6 @@ public class BookController {
     @Autowired
     private BookService bookService;
 
-    //    @RequestMapping(value="/books", method = RequestMethod.GET,params = "query")
     @GetMapping(path = "/books", params = "query")
     public List<Book> searchBooks(@RequestParam("query") String query){
         return bookService.searchBooks( query);

@@ -23,8 +23,6 @@ public class MainGateway {
     public RouteLocator myRoutes(RouteLocatorBuilder builder) {
         return builder.routes()
                 .route(r -> r.path("/book/**")
-//                        .filters(f -> f.rewritePath("/book","").filter(jwtCheckFilter))
-
                         .filters(f -> f.rewritePath("/book",""))
                         .uri("lb://BOOK-SERVICE")
                 ).route(r->r.path("/user/**")

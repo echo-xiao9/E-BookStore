@@ -57,7 +57,7 @@ class Excel extends React.Component {
         if (this.state.edit.cell === 3) {
             axios({
                 method: 'GET',
-                url: 'http://localhost:9090/adminUserChange',
+                url: 'https://localhost:9090/adminUserChange',
                 params: {
                     user_id: data[this.state.edit.row][0],
                     name: data[this.state.edit.row][1],
@@ -120,8 +120,8 @@ class Excel extends React.Component {
     };
 
     getBooks = () => {
-        // fetch("http://localhost:8080/se122_10_reactdb_war/BookManager")
-        fetch("http://localhost:9090/adminUser")
+        // fetch("https://localhost:8080/se122_10_reactdb_war/BookManager")
+        fetch("https://localhost:9090/adminUser")
             .then(response => response.json())
             .then(data => {
                 this.setState({

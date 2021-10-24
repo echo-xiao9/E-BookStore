@@ -20,7 +20,7 @@ export default class Orders extends React.Component {
             to: "2021-12-12"
         }
 
-        const url = "http://localhost:9090/getOrders";
+        const url = "https://localhost:9090/getOrders";
         axios.get(url).then((response) => {
             const data = response.data;
             this.setState({
@@ -44,7 +44,7 @@ export default class Orders extends React.Component {
             var lineRow = new Array();
             axios({
                 method: 'GET',
-                url: 'http://localhost:9090/getOrderItem',
+                url: 'https://localhost:9090/getOrderItem',
                 params: {
                     order_id: line.orderId
                 }
@@ -81,7 +81,7 @@ export default class Orders extends React.Component {
 
 
     fetchData() {
-        const url = "http://localhost:9090/getOrders";
+        const url = "https://localhost:9090/getOrders";
         axios.get(url).then((response) => {
             const data = response.data;
             return data;
@@ -103,7 +103,7 @@ export default class Orders extends React.Component {
 
         axios({
             method: 'GET',
-            url: 'http://localhost:9090/getAdminBookOrders',
+            url: 'https://localhost:9090/getAdminBookOrders',
             params: {
                 bookName: this.state.bookName
             }
@@ -117,7 +117,7 @@ export default class Orders extends React.Component {
 
 
     reset = () => {
-        const url = "http://localhost:9090/getOrders";
+        const url = "https://localhost:9090/getOrders";
         axios.get(url).then((response) => {
             const data = response.data;
             console.log("reset");
@@ -179,7 +179,7 @@ export default class Orders extends React.Component {
 
         axios({
             method: 'GET',
-            url: 'http://localhost:9090/getAdminDateOrder',
+            url: 'https://localhost:9090/getAdminDateOrder',
             params: {
                 from: newFrom,
                 to: newTo

@@ -29,7 +29,7 @@ class Book extends Component {
         }
         axios({
             method: 'GET',
-            url: 'http://localhost:9090/getBook',
+            url: 'https://localhost:9090/books',
             params: {
                 id: this.getQueryVariable("bookId")
             }
@@ -224,7 +224,7 @@ and is wrapped around the whole page content, except for the footer in this exam
             alert("please log in!");
             <script type="text/javascript">
                 function jumurl(){
-                window.location.href = 'http://localhost:3000/login'
+                window.location.href = 'https://localhost:3000/login'
             }
                 setTimeout(jumurl,3000);
             </script>
@@ -233,7 +233,7 @@ and is wrapped around the whole page content, except for the footer in this exam
         console.log(this.state.book);
         axios({
             method: 'GET',
-            url: 'http://localhost:9090/addToCart',
+            url: 'https://localhost:9090/addToCart',
             params: {
                 name: this.state.book.name,
                 author: this.state.book.author,

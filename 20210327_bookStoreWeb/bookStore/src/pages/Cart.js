@@ -35,7 +35,7 @@ export default class Carts extends React.Component {
             alert("please log in!");
             <script type="text/javascript">
                 function jumurl(){
-                window.location.href = 'http://localhost:3000/login'
+                window.location.href = 'https://localhost:3000/login'
             }
                 setTimeout(jumurl,3000);
             </script>
@@ -44,7 +44,7 @@ export default class Carts extends React.Component {
 
         axios({
             method: 'GET',
-            url: 'http://localhost:9090/getUserCart',
+            url: 'https://localhost:9090/getUserCart',
             params: {
                 userId: localStorage.getItem("userId")
             }
@@ -60,7 +60,7 @@ export default class Carts extends React.Component {
         if (localStorage.getItem("userId") === null) {
             <script type="text/javascript">
                 function jumurl(){
-                window.location.href = 'http://localhost:3000/login'
+                window.location.href = 'https://localhost:3000/login'
             }
                 setTimeout(jumurl,3000);
             </script>
@@ -180,7 +180,7 @@ export default class Carts extends React.Component {
         console.log(this.state.books[index]);
         axios({
             method: 'GET',
-            url: 'http://localhost:9090/deleteCartItem',
+            url: 'https://localhost:9090/deleteCartItem',
             params: {
                 cartId: this.state.books[index].cartId
             }
@@ -228,7 +228,7 @@ export default class Carts extends React.Component {
         }
         axios({
             method: 'GET',
-            url: 'http://localhost:9090/addOrderFromUser',
+            url: 'https://localhost:9090/addOrderFromUser',
             params: {
                 user_id: localStorage.getItem("userId"),
                 order_price: this.state.totalPrice,
@@ -247,7 +247,7 @@ export default class Carts extends React.Component {
                 //   console.log(i);
                 //   axios({
                 //     method: 'GET',
-                //     url: 'http://localhost:9090/addOrderItem',
+                //     url: 'https://localhost:9090/addOrderItem',
                 //     params: {
                 //       order_id: this.state.order_id,
                 //       book_id:i.bookId,

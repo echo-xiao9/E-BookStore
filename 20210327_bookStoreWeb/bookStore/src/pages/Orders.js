@@ -108,8 +108,8 @@ class Excel extends React.Component {
     };
 
     getBooks = () => {
-        // fetch("http://localhost:8080/se122_10_reactdb_war/BookManager")
-        fetch("http://localhost:9090/getOrders")
+        // fetch("https://localhost:8080/se122_10_reactdb_war/BookManager")
+        fetch("https://localhost:9090/getOrders")
             .then(response => response.json())
             .then(data => {
                 // alert("data:" + data);
@@ -126,8 +126,8 @@ class Excel extends React.Component {
 
 
     saveBooks = () => {
-        // fetch("http://localhost:8080/se122_10_reactdb_war/BookManager")
-        fetch("http://localhost:9090/adminBook")
+        // fetch("https://localhost:8080/se122_10_reactdb_war/BookManager")
+        fetch("https://localhost:9090/adminBook")
             .then(response => response.json())
             .then(data => { // alert("data:" + data);
                 // const propertyValues = Object.entries(data);
