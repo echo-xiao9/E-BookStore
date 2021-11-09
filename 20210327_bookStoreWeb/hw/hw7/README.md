@@ -82,6 +82,8 @@
 
 上面提到的(2)(3）两点仍然起作用，分区进行增删改查，使得顺序读写的概率增加，从而性能得到了提升
 
+但是因为bookstore的数据量太少了，分区反而降低性能了。
+
 # reference
 
 [mysql自动分区partition_ 深入理解MySQL分区（Partition）_fire life的博客-CSDN博客](https://blog.csdn.net/weixin_42624889/article/details/113633336?utm_medium=distribute.pc_relevant.none-task-blog-2~default~baidujs_title~default-5.essearch_pc_relevant&spm=1001.2101.3001.4242.4)
