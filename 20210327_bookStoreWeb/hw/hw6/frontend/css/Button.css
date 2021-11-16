@@ -28,7 +28,7 @@
     background-color: transparent;
     color: rgb(0, 0, 0);
     padding: 8px 20px;
-    border: 1px solid var(--primary);
+    border: 1px solid ;
     transition: all 0.3s ease-out;
 }
 
@@ -42,6 +42,18 @@
     padding: 1vh;
     border-radius: 0;
 }
+
+.btn--blackBG2 {
+  background-color: #000;
+    border-color: #000;
+    color: white;
+    width: 100%;
+    font-size: 0.7rem;
+    margin-top: 4vh;
+    padding: 1vh;
+    border-radius: 0;
+}
+
 
 .btn--medium {
     padding: 8px 20px;

@@ -4,7 +4,7 @@ import React from 'react';
 import '../css/Button.css';
 import { Link } from 'react-router-dom';
 
-const STYLES = ['btn--primary', 'btn--outline', 'btn--test','btn--blackBG'];
+const STYLES = ['btn--primary', 'btn--outline', 'btn--test','btn--blackBG','btn--blackBG2'];
 
 const SIZES = ['btn--medium', 'btn--large'];
 
