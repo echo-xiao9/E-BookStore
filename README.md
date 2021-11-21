@@ -71,9 +71,9 @@ An online book store
 
 使用 Lucene 全文搜索引擎，对书籍简介文本建立索引，使用户可以快速高效进行全文搜索。
 
-#### [SOAP](https://github.com/echo-xiao9/E-BookStore/tree/main/20210327_bookStoreWeb/hw/hw4)
+#### [Web Service](https://github.com/echo-xiao9/E-BookStore/tree/main/20210327_bookStoreWeb/hw/hw4)
 
-使用 SOAP Web Service，将书籍的全文搜索开发并部署成 Web Service，使得其他应用可以跨平台访问。
+书籍的全文搜索开发并部署成 Web Service，同一个URL使用不同的参数访问。实现了接口是对数据而不是操作定义的restful的web service。
 
 #### [microservice](https://github.com/echo-xiao9/E-BookStore/tree/main/20210327_bookStoreWeb/hw/hw5)
 

@@ -20,10 +20,11 @@
 
 采用restfulWebService, 因为只有查询，所以就用getMapping
 
-![image-20211022001422878](README .assets/image-20211022001422878.png)
+![image-20211022001422878](README%20336fc23bbb714e7ca3f91f6868ac1e2a/image-20211022001422878.png)
 
 这里用同一个URL，但是带不同的参数，实现了接口是对数据而不是操作定义的restful的web service
 
-![image-20211022001521573](README .assets/image-20211022001521573.png)
+![image-20211022001521573](README%20336fc23bbb714e7ca3f91f6868ac1e2a/image-20211022001521573.png)
 
-针对不同的操作使用不同的方法（Post,get,...)œ
+针对不同的操作使用不同的方法（Post,get,...)
+
