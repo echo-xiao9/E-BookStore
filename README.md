@@ -41,7 +41,7 @@ An online book store
 **Frontend**: React </br>
 **Backend**: SpringBoot、Maven </br>
 
-**Database**: mysql, mongodb, neo4j</br>
+**Database**: mysql, mongodb, neo4j, influxdb</br>
 
 **middleware**: Activemq、WebSocket、Lucene、SOAP、WSDL、Eureka </br>
 
@@ -87,4 +87,7 @@ An online book store
 
 为书籍添加多个标签，使用 Neo4j 数据库存储标签类型和相互关联性，使得用户可以根据标签模糊搜索含有相邻标签的书籍。
 
+#### [InfluxDB]()
+
+实时监控电脑的CPU各个核，disk各个盘等运行状态。
 
