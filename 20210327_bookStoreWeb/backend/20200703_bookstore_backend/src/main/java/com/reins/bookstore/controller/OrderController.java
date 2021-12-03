@@ -29,7 +29,7 @@ public class OrderController {
 
 
 
-    @GetMapping("/getUserOrders")
+    @GetMapping("/session/getUserOrders")
     public String getUserOrders(@RequestParam(required = false) Integer user_id){
         return JSON.toJSONString(orderService.getUserOrders(user_id), SerializerFeature.DisableCircularReferenceDetect);
     }

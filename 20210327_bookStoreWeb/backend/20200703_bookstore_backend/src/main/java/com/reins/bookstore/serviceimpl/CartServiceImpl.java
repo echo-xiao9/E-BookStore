@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-@Scope("session")
+//@Scope("session")
 public class CartServiceImpl implements CartService {
     @Autowired
     private CartDao cartDao;
