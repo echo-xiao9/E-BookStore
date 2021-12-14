@@ -6,13 +6,14 @@ import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 @Data
 @Entity
 @Table(name = "cart")
 @JsonIgnoreProperties(value = {"handler","hibernateLazyInitializer","fieldHandler"})
 @JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class,property = "cartId")
-public class Cart {
+public class Cart implements Serializable {
     @Id
     @GeneratedValue(strategy= GenerationType.SEQUENCE,generator="cart_id")
     @Column(name = "cart_id")

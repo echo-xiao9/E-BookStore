@@ -39,11 +39,11 @@ An online book store
 ### 技术栈
 
 **Frontend**: React </br>
-**Backend**: SpringBoot、Maven </br>
+**Backend**: SpringBoot、Maven、Docker </br>
 
 **Database**: mysql, mongodb, neo4j, influxdb</br>
 
-**middleware**: Activemq、WebSocket、Lucene、SOAP、WSDL、Eureka </br>
+**middleware**: Activemq、WebSocket、Lucene、SOAP、WSDL、Eureka、Nginx、Hadoop</br>
 
 ### 技术亮点
 
@@ -87,7 +87,19 @@ An online book store
 
 为书籍添加多个标签，使用 Neo4j 数据库存储标签类型和相互关联性，使得用户可以根据标签模糊搜索含有相邻标签的书籍。
 
-#### [InfluxDB]()
+#### [InfluxDB](https://github.com/echo-xiao9/E-BookStore/tree/main/20210327_bookStoreWeb/hw/hw9)
 
 实时监控电脑的CPU各个核，disk各个盘等运行状态。
+
+#### [Nginx](https://github.com/echo-xiao9/E-BookStore/tree/main/20210327_bookStoreWeb/hw/hw10)
+
+负载均衡，处理高并发。
+
+#### [Docker](https://github.com/echo-xiao9/E-BookStore/tree/main/20210327_bookStoreWeb/hw/hw10)
+
+容器化部署，即负载均衡器nginx、缓存redis、服务集群tomcat都在docker容器中部署。 
+
+#### [Hadoop MapReduce](https://github.com/echo-xiao9/E-BookStore/tree/main/20210327_bookStoreWeb/hw/hw11)
+
+使用hadoop MapReduce 框架统计图书简介中上述每个关键词出现的次数。
 

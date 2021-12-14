@@ -74,7 +74,7 @@ public Connector connector() {
     connector.setScheme("http");
     connector.setPort(8787);
     connector.setSecure(false);
-    connector.setRedirectPort(9090);
+    connector.setRedirectPort(9091);
     return connector;
 }
 

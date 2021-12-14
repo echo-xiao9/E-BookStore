@@ -1,6 +1,7 @@
 package com.reins.bookstore.controller;
 
 import com.reins.bookstore.constant.Constant;
+import com.reins.bookstore.entity.User;
 import com.reins.bookstore.entity.UserAuth;
 import com.reins.bookstore.service.UserService;
 import com.reins.bookstore.utils.msgutils.Msg;
@@ -9,9 +10,12 @@ import com.reins.bookstore.utils.msgutils.MsgUtil;
 import com.reins.bookstore.utils.sessionutils.SessionUtil;
 import net.sf.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.web.bind.annotation.*;
 
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import java.util.List;
 import java.util.Map;
 
@@ -27,7 +31,11 @@ public class LoginController {
 
     @Autowired
     private UserService userService;
-
+    private StringRedisTemplate redisTemplate;
+    @Autowired
+    public LoginController(StringRedisTemplate redisTemplate){
+        this.redisTemplate = redisTemplate;
+    }
 
     /**
      * @Description: login
@@ -56,7 +64,11 @@ public class LoginController {
             SessionUtil.setSession(obj);
             JSONObject data = JSONObject.fromObject(auth);
             data.remove(Constant.PASSWORD);
-
+            // redis session
+//            HttpSession session = request.getSession();
+//            User user=userService.getUserByName(username);
+//            session.setAttribute("userId", user.getUserId());
+//            redisTemplate.opsForValue().set("userId:"+user.getUserId(), session.getId());
             return MsgUtil.makeMsg(MsgCode.SUCCESS, MsgUtil.LOGIN_SUCCESS_MSG, data);
         }
         else{

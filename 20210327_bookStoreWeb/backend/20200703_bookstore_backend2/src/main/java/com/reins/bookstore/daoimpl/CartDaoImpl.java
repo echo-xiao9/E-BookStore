@@ -4,7 +4,7 @@ import com.alibaba.fastjson.JSONArray;
 import com.reins.bookstore.dao.CartDao;
 import com.reins.bookstore.entity.Cart;
 import com.reins.bookstore.repository.CartRepository;
-import com.reins.bookstore.utils.RedisUtil;
+import com.reins.bookstore.utils.redis.RedisUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Propagation;
@@ -29,13 +29,15 @@ public class CartDaoImpl implements CartDao {
     @Override
     public List<Cart> getUserCart(Integer userId) {
         List<Cart> userCart = new ArrayList<Cart>();
-        Object uc=redisUtil.get("userCart"+userId);
-        if(uc==null){
-            userCart = cartRepository.findByUserId(userId);
-            redisUtil.set("userCart"+userId, JSONArray.toJSON(userCart));
-        }else{
-            userCart = JSONArray.parseArray(uc.toString(),Cart.class);
-        }
+//        Object uc=redisUtil.get("userCart"+userId);
+//        if(uc==null){
+//            userCart = cartRepository.findByUserId(userId);
+//            redisUtil.set("userCart"+userId, JSONArray.toJSON(userCart));
+//        }else{
+//            userCart = JSONArray.parseArray(uc.toString(),Cart.class);
+//        }
+        userCart = cartRepository.findByUserId(userId);
+//        userCart = JSONArray.parseArray(uc.toString(),Cart.class);
         return userCart;
     }
 
@@ -43,19 +45,19 @@ public class CartDaoImpl implements CartDao {
     public Cart deleteCartItem(Integer cartId) {
         Optional<Cart>  c=cartRepository.findById(cartId);
         if(c.isPresent()) {
-           // clear cache of userCart
-            List<Cart> userCart = new ArrayList<Cart>();
-            Object uc=redisUtil.get("userCart"+c.get().getUserId());
-            if(uc!= null){
-                userCart = JSONArray.parseArray(uc.toString(),Cart.class);
-                for(Cart item: userCart){
-                    if(cartId.equals(item.getCartId())){
-                        userCart.remove(item);
-                        redisUtil.set("userCart"+c.get().getUserId(),JSONArray.toJSON(userCart));
-                        if(userCart.size()==0)break;
-                    }
-                }
-            }
+//           // clear cache of userCart
+//            List<Cart> userCart = new ArrayList<Cart>();
+//            Object uc=redisUtil.get("userCart"+c.get().getUserId());
+//            if(uc!= null){
+//                userCart = JSONArray.parseArray(uc.toString(),Cart.class);
+//                for(Cart item: userCart){
+//                    if(cartId.equals(item.getCartId())){
+//                        userCart.remove(item);
+//                        redisUtil.set("userCart"+c.get().getUserId(),JSONArray.toJSON(userCart));
+//                        if(userCart.size()==0)break;
+//                    }
+//                }
+//            }
             cartRepository.deleteById(cartId);
             return c.get();
         }
@@ -66,7 +68,7 @@ public class CartDaoImpl implements CartDao {
     @Transactional(propagation= Propagation.SUPPORTS)
     public List<Cart> clearCart(Integer userId) {
         List<Cart> userCartList = getUserCart(userId);
-        redisUtil.del("userCart"+userId);
+//        redisUtil.del("userCart"+userId);
         for(Cart c:userCartList){
             cartRepository.deleteById(c.getCartId());
         }
@@ -85,12 +87,12 @@ public class CartDaoImpl implements CartDao {
         }
         // refresh cache
         List<Cart> userCart = new ArrayList<Cart>();
-        Object uc=redisUtil.get("userCart"+userId);
-        if(uc!= null) {
-            userCart = JSONArray.parseArray(uc.toString(), Cart.class);
-            userCart.add(cart);
-            redisUtil.set("userCart"+userId,JSONArray.toJSON(userCart));
-        }
+//        Object uc=redisUtil.get("userCart"+userId);
+//        if(uc!= null) {
+//            userCart = JSONArray.parseArray(uc.toString(), Cart.class);
+//            userCart.add(cart);
+//            redisUtil.set("userCart"+userId,JSONArray.toJSON(userCart));
+//        }
         // refresh db
         cartRepository.save(cart);
         return cart;

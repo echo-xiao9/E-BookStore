@@ -9,6 +9,7 @@ import org.springframework.jms.core.JmsTemplate;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.context.WebApplicationContext;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -29,7 +30,7 @@ public class OrderController {
 
 
 
-    @GetMapping("/session/getUserOrders")
+    @GetMapping("/getUserOrders")
     public String getUserOrders(@RequestParam(required = false) Integer user_id){
         return JSON.toJSONString(orderService.getUserOrders(user_id), SerializerFeature.DisableCircularReferenceDetect);
     }
