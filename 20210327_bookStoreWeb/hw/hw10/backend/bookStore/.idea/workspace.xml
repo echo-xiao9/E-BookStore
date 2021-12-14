@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="04f50232-017c-4f99-a313-d625ad97777d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../../SE118_ICS/lab7/ics-lab7/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../SE118_ICS/lab7/ics-lab7/README" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../SE118_ICS/lab7/ics-lab7/myint" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../SE118_ICS/lab7/ics-lab7/myint.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../SE118_ICS/lab7/ics-lab7/myspin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../SE118_ICS/lab7/ics-lab7/myspin.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../SE118_ICS/lab7/ics-lab7/mysplit" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../SE118_ICS/lab7/ics-lab7/mysplit.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../SE118_ICS/lab7/ics-lab7/mystop" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../SE118_ICS/lab7/ics-lab7/mystop.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../SE118_ICS/lab7/ics-lab7/sdriver.pl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../SE118_ICS/lab7/ics-lab7/trace01.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../SE118_ICS/lab7/ics-lab7/trace02.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../SE118_ICS/lab7/ics-lab7/trace03.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../SE118_ICS/lab7/ics-lab7/trace04.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../SE118_ICS/lab7/ics-lab7/trace05.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../SE118_ICS/lab7/ics-lab7/trace06.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../SE118_ICS/lab7/ics-lab7/trace07.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../SE118_ICS/lab7/ics-lab7/trace08.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../SE118_ICS/lab7/ics-lab7/trace09.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../SE118_ICS/lab7/ics-lab7/trace10.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../SE118_ICS/lab7/ics-lab7/trace11.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../SE118_ICS/lab7/ics-lab7/trace12.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../SE118_ICS/lab7/ics-lab7/trace13.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../SE118_ICS/lab7/ics-lab7/trace14.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../SE118_ICS/lab7/ics-lab7/trace15.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../SE118_ICS/lab7/ics-lab7/trace16.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../SE118_ICS/lab7/ics-lab7/tsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../SE118_ICS/lab7/ics-lab7/tsh.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../SE118_ICS/lab7/ics-lab7/tshref" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../SE118_ICS/lab7/ics-lab7/tshref.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/CardItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CardItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Cards.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Cards.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/CartItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CartItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Cart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Cart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/useForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/useForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bookstorebackend/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bookstorebackend/.mvn/wrapper/MavenWrapperDownloader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bookstorebackend/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bookstorebackend/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bookstorebackend/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bookstorebackend/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bookstorebackend/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bookstorebackend/src/main/java/com/echo/bookstorebackend/BookstorebackendApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bookstorebackend/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bookstorebackend/src/test/java/com/echo/bookstorebackend/BookstorebackendApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bookstorebackend/src/test/java/com/echo/bookstorebackend/controller/BookController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bookstorebackend/src/test/java/com/echo/bookstorebackend/controller/UserController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bookstorebackend/src/test/java/com/echo/bookstorebackend/entity/Book.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bookstorebackend/src/test/java/com/echo/bookstorebackend/entity/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bookstorebackend/src/test/java/com/echo/bookstorebackend/repository/BookRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bookstorebackend/src/test/java/com/echo/bookstorebackend/repository/UserRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../20210515_axiosFetchFromAPI/frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../20210515_axiosFetchFromAPI/frontend/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../20210515_mysqlToFrontEndDemo/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../20210515_mysqlToFrontEndDemo/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../20210515_mysqlToFrontEndDemo/src/main/java/com/example/demo/configure/CorsConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../20210515_mysqlToFrontEndDemo/src/main/java/com/example/demo/configure/WebSecurityConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../20210515_mysqlToFrontEndDemo/src/main/java/com/example/demo/controller/BookController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../20210515_mysqlToFrontEndDemo/src/main/java/com/example/demo/controller/UserController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../20210515_mysqlToFrontEndDemo/src/main/java/com/example/demo/entity/Book.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../20210515_mysqlToFrontEndDemo/src/main/java/com/example/demo/entity/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../20210515_mysqlToFrontEndDemo/src/main/java/com/example/demo/entity/UserAuth.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../20210515_mysqlToFrontEndDemo/src/main/java/com/example/demo/repository/BookRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../20210515_mysqlToFrontEndDemo/src/main/java/com/example/demo/repository/UserAuthRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../20210515_mysqlToFrontEndDemo/src/main/java/com/example/demo/repository/UserRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../20210515_mysqlToFrontEndDemo/src/main/java/com/example/demo/service/BookDetailService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../20210515_mysqlToFrontEndDemo/src/main/java/com/example/demo/service/CustomUserDetails.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../20210515_mysqlToFrontEndDemo/src/main/java/com/example/demo/service/CustomUserDetailsService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../20210515_mysqlToFrontEndDemo/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../20210515_mysqlToFrontEndDemo/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../20210515_mysqlToFrontEndDemo的副本/src/main/java/com/example/demo/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../20210515_mysqlToFrontEndDemo的副本/src/main/java/com/example/demo/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../20210515_mysqlToFrontEndDemo的副本/src/main/java/com/example/demo/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../20210515_mysqlToFrontEndDemo的副本/src/main/java/com/example/demo/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../SE2322_HighLevelDataStructure/20210327_minimalBasic/MainWindow.o" beforeDir="false" afterPath="$PROJECT_DIR$/../../../SE2322_HighLevelDataStructure/20210327_minimalBasic/MainWindow.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../SE2322_HighLevelDataStructure/20210327_minimalBasic/MainWindow.ui" beforeDir="false" afterPath="$PROJECT_DIR$/../../../SE2322_HighLevelDataStructure/20210327_minimalBasic/MainWindow.ui" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../SE2322_HighLevelDataStructure/20210327_minimalBasic/project1_minimal_basic.app/Contents/MacOS/project1_minimal_basic" beforeDir="false" afterPath="$PROJECT_DIR$/../../../SE2322_HighLevelDataStructure/20210327_minimalBasic/project1_minimal_basic.app/Contents/MacOS/project1_minimal_basic" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../SE2322_HighLevelDataStructure/20210327_minimalBasic/project1_minimal_basic.pro.user" beforeDir="false" afterPath="$PROJECT_DIR$/../../../SE2322_HighLevelDataStructure/20210327_minimalBasic/project1_minimal_basic.pro.user" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../SE2322_HighLevelDataStructure/20210327_minimalBasic/ui_MainWindow.h" beforeDir="false" afterPath="$PROJECT_DIR$/../../../SE2322_HighLevelDataStructure/20210327_minimalBasic/ui_MainWindow.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../SE2322_HighLevelDataStructure/basicTest/test.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../SE2322_HighLevelDataStructure/basicTest/test2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../SE2322_HighLevelDataStructure/basicTest/test_01.TXT" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../SE2322_HighLevelDataStructure/basicTest/test_02.TXT" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../SE2322_HighLevelDataStructure/basicTest/test_03.TXT" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../SE2322_HighLevelDataStructure/basicTest/test_04.TXT" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../SE2322_HighLevelDataStructure/basicTest/test_05.TXT" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../SE2322_HighLevelDataStructure/basicTest/test_0511ERROR2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../SE2322_HighLevelDataStructure/basicTest/test_0511TEST.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../SE2322_HighLevelDataStructure/basicTest/test_string.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../SE2322_HighLevelDataStructure/basicTest/testfinal.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../SE2322_HighLevelDataStructure/exercises" beforeDir="false" afterPath="$PROJECT_DIR$/../../../SE2322_HighLevelDataStructure/exercises" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="ProjectId" id="1sZoMMFYH5klkDyFi6BclBpDJfU" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/pages" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="yarn" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/pages" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="04f50232-017c-4f99-a313-d625ad97777d" name="Default Changelist" comment="" />
+      <created>1621089424051</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1621089424051</updated>
+      <workItem from="1621089425968" duration="15000" />
+      <workItem from="1621134186259" duration="3772000" />
+      <workItem from="1621144076502" duration="9096000" />
+      <workItem from="1621168070322" duration="5917000" />
+      <workItem from="1621262771166" duration="488000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+</project>
