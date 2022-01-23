@@ -79,11 +79,9 @@ public static void main(String[] args) throws Exception {
         Job job = Job.getInstance(conf, "word count");
         job.setJarByClass(WordCount2.class);
         job.setMapperClass(TokenizerMapper.class);
-        job.setCombinerClass(IntSumReducer.class);
         job.setReducerClass(IntSumReducer.class);
         job.setOutputKeyClass(Text.class);
         job.setOutputValueClass(IntWritable.class);
-        job.setNumReduceTasks(2);
         List<String> otherArgs = new ArrayList<String>();
         for (int i=0; i < remainingArgs.length; ++i) {
             if ("-keywords".equals(remainingArgs[i])) {
@@ -209,9 +207,9 @@ public static class IntSumReducer
 
 mapper的数量由输入文件被切分成blocks的数量决定。blocksize=128MB , 如果单个文件大于这个大小就会被分割。由于我的5个输入文件都没有超出这个大小，于是有5个block, 对应于5次job.
 
-在本次实现中，在main函数中设置reducer为2. `job.setNumReduceTasks(2);`
+在本次实现中，没有指定reducer的数量，就是默认为1.
 
-理论上， 对于每个job, 会有1个mapper和2个reducer.
+理论上， 对于每个job, 会有1个mapper， 因此应该有5个mapper, 1个reducer
 
 进行程序观察，在mapper和reducer都加入了成员变量uuid, 并且在初始化的时候输出UUID的值。
 
@@ -225,10 +223,6 @@ mapper 直接在setup的时候输出和构造函数输出效果一致
 
 ![Untitled](hw11%20Hadoop%20MapReduce%2053c2f6def20343dfaa39639e73f9bd93/Untitled%209.png)
 
+和理论分析一致
+
 ![Untitled](hw11%20Hadoop%20MapReduce%2053c2f6def20343dfaa39639e73f9bd93/Untitled%2010.png)
-
-![Untitled](hw11%20Hadoop%20MapReduce%2053c2f6def20343dfaa39639e73f9bd93/Untitled%2011.png)
-
-在output 出现了两个文件，应该是由于reducer设置了2产生的（尝试过如果默认也就是reducer=1的情况只有一个文件part-r-00000),分别统计了不同的单词。打印出来的log和上面的mapper reducer的个数分析一致，有5个job, 也就是对应一个job，1个mapper和2个reducer.
-
-在mapreduce 中，框架解决了很多问题，比如切分任务，分配mapper, reducer, 容错等，我们只需要写好对输入输出的处理，mapper和reducer的工作就可以了非常方便。

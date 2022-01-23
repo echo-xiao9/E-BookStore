@@ -4,7 +4,7 @@ import com.reins.bookstore.dao.BookDao;
 import com.reins.bookstore.entity.Book;
 import com.reins.bookstore.repository.BookRepository;
 //import net.sf.json.JSONArray;
-import com.reins.bookstore.utils.RedisUtil;
+import com.reins.bookstore.utils.redis.RedisUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 

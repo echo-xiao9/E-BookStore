@@ -2,41 +2,57 @@
 
 An online book store
 
-### 项目简介（功能要求）
+### Project introduction 
 
-1. 用户管理：管理员身份登录后，可以看到该功能；用户分为两种角色：顾客和管理员
-   * 管理员可以禁用 / 解禁用户，被禁用的用户将无法登录系统。
-2. 用户登录与注册
-   * 用户登录需要输入用户名和密码，未输入点登录按钮时，提示用户必须输入。
-   * 被禁用用户无法登录系统，并且会提示用户 "您的账号已经被禁用"。 
-   * 根据用户名来确认其为管理员还是顾客，不同角色的界面具有差异。
-   * 新用户注册时需要填写用户名、密码、重复密码、邮箱。
-   * 需要校验用户名是否重复、两次输入的密码是否相同、邮箱是否符合格式要求。
-3. 书籍管理：管理员身份登录后，可以看到该功能
-   * 管理员可以浏览数据库中已有的书籍，以列表形式显示，包括书名、作者、封面、ISBN 编号和库存量。
-   * 在列表上方提供搜索功能，管理员可以用书名来过滤想要查找的书籍。
-   * 管理员在列表中可以修改每本图书的上述各种属性，包括书名、作者、封面、ISBN 编号和库存量。
-   * 管理员可以删除旧图书，可以添加新图书。
-4. 浏览书籍：此部分功能可以复用“书籍管理”中的功能
-   * 顾客和管理员都可以浏览数据库中已有的书籍，以列表形式显示，包括书名、作者、封面、ISBN 编号和库存量。
-   * 提供搜索功能，用户可以用书名来过滤想要查找的书籍。
-   * 选中某本书后，通过Ajax 方式获取并显示书的详细信息。
-5. 购买书籍
-   * 当用户浏览书籍时，可以选择将某本书放入购物车。
-   * 用户可以浏览购物车，看到自己放入购物车的所有书籍。
-   * 在购物车中点击购买书籍之后，清空购物车，同时书籍库存相应地减少。
-   * 购买书籍后，生成订单，展示给用户，并将订单存入数据库。
-6. 订单管理
-   * 顾客可以查看自己的所有订单，并且可以使用搜索功能来实现过滤，具体可以按照时间范围或书籍名称过滤。
-   * 管理员可以查看系统中所有的订单，并且可以使用搜索功能来实现过
-     滤，具体可以按照时间范围或书籍名称过滤。
-7. 统计
-   * 管理员可以统计在指定时间范围内各种书的销量情况，按照销售量排
-     序，形成热销榜，以图或表的方式呈现。
-   * 管理员可以统计在指定时间范围内每个用户的累计消费情况，按照购书进行排序，形成消费榜，以图或表的方式呈现。
-   * 顾客可以统计在指定时间范围内自己购买书籍的情况 ，包括每种书购买了多少本，购书总本数和总金额。
+1. User management: 
+   
+   - you can see this function after logging in as administrator; users are divided into two roles: customers and administrators
+   
+   - The administrator can disable/unblock users, and the disabled users will not be able to log into the system. 
+   
+2. User Login and Registration
+   * User login requires user name and password, if you don't enter them, you will be prompted to enter them when you click the login button.
+   * Disabled users cannot log in to the system and the user will be prompted "Your account has been disabled". 
+   * The user name is used to identify whether they are an administrator or a customer, and the interface has differences for different roles.
+   * New users need to fill in username, password, duplicate password and email when registering.
+   * It is necessary to check whether the user name is duplicated, whether the password entered twice is the same, and whether the email address meets the format requirements.
 
-### 技术栈
+3. Book management: 
+
+   After logging in as administrator, you can see these function:
+
+   1. Administrator can browse the existing books in the database and display them in the form of list, including title, author, cover, ISBN number and stock quantity.
+   2. The search function is provided at the top of the list, and the administrator can filter the books he/she wants to find by the book name.
+   3. Administrators can modify various attributes of each book mentioned above in the list, including title, author, cover, ISBN number and stock quantity.
+   4. The administrator can delete old books and add new books. 4.
+
+4. Browse Books: This part can reuse the functions in "Book Management".
+   * Both customers and administrators can browse existing books in the database and display them in a list, including title, author, cover, ISBN number and stock quantity.
+   * Provide search function, users can filter the books they want to find by book name.
+   * When a book is selected, the details of the book are retrieved and displayed via Ajax. 
+
+5. Buy Books
+   * When users browse books, they can choose to put a book into the shopping cart.
+   * Users can browse the shopping cart and see all the books they have added to the cart.
+   * After clicking on a book in the shopping cart, the cart is emptied and the book inventory is reduced accordingly.
+   * After purchasing a book, an order is generated and displayed to the user and the order is stored in the database.
+
+6. Order Management
+   * Customers can view all their orders and can use the search function for filtering, specifically by time range or book name.
+   * Administrators can view all orders in the system and can use the search function to achieve over
+     The administrator can view all orders in the system and use the search function to filter them by time range or book name. 
+
+7. Statistics
+   * Administrators can count the sales of various books within a specified time frame, rank them according to sales volume
+     The administrator can count the sales of various books within a specified time frame, sort them by sales volume, and form a hot list, which is presented in the form of a chart or table.
+     
+   * Administrators can count the cumulative consumption of each user within a specified time frame, sort the books by purchase, form a consumption list, and present it in the form of a chart or a table.
+
+   * Customers can count their book purchases within a specified time frame, including how many copies of each book they have purchased, the total number of books purchased and the total amount.
+
+     
+
+### Technology Stack
 
 **Frontend**: React </br>
 **Backend**: SpringBoot、Maven、Docker </br>
@@ -45,61 +61,61 @@ An online book store
 
 **middleware**: Activemq、WebSocket、Lucene、SOAP、WSDL、Eureka、Nginx、Hadoop</br>
 
-### 技术亮点
+### Technical Highlights
 
 #### [Activemq](https://github.com/echo-xiao9/E-BookStore/tree/main/20210327_bookStoreWeb/hw/hw1)
 
-使用 Activemq 实现下订单功能消息队列。当用户点击下订单时，后端 Controller 先使用生产者将用户请求转发给消费者，并迅速返回给用户该订单正在执行中。后端消费者将在空闲时期完成这笔交易。有效提高了下订单的效率和吞吐量
+Use Activemq to implement an order placement function message queue. When a user clicks to place an order, the back-end Controller first forwards the user request to the consumer using the producer and quickly returns to the user that the order is being executed. The back-end consumer will complete the transaction during the idle period. This effectively improves the efficiency and throughput of placing orders.
 
 #### [WebSocket](https://github.com/echo-xiao9/E-BookStore/tree/main/20210327_bookStoreWeb/hw/hw2)
 
-使用 WebSocket 实现一个在线聊天室，用户可以在其中进行实时群聊。
+Use WebSocket to implement an online chat room where users can engage in real-time group chats.
 
 #### [Transaction](https://github.com/echo-xiao9/E-BookStore/tree/main/20210327_bookStoreWeb/hw/hw2)
 
-运用增加 SpringBoot 注释方式，增加对下订单服务的事务控制功能，确保下订单动作和数据库的一致性和完整性。
+Utilize additional **SpringBoot annotation** methods to add transaction control features to the order placement service to ensure consistency and integrity of order placement actions and the database.
 
 #### [MultiThreading](https://github.com/WilliamX1/bookstore/blob/main/hw/hw3/README.md)
 
-采用面向切口编程理念，对用户访问接口进行访问次数统计。且使用 **AtomicCounter** 进行原子性计数，保证多线程访问时数据安全可靠。
+The interface-oriented programming concept is used to count the number of user accesses to the interface. And use **AtomicCounter** for count atomicity, to ensure data safety and reliability when multi-threaded access.
 
 #### [Redis](https://github.com/echo-xiao9/E-BookStore/tree/main/20210327_bookStoreWeb/hw/hw3)
 
-使用 Redis 数据库作书籍信息的缓存，大大减少 MySQL 数据库压力，提高访问速度和稳定性。
+Use Redis database as a cache for book information, which greatly reduces the pressure on MySQL database and improves access speed and stability.
 
 #### [Lucene](https://github.com/echo-xiao9/E-BookStore/tree/main/20210327_bookStoreWeb/hw/hw4)
 
-使用 Lucene 全文搜索引擎，对书籍简介文本建立索引，使用户可以快速高效进行全文搜索。
+Use Lucene full-text search engine to index the text of book profiles, so that users can quickly and efficiently perform full-text searches.
 
 #### [Web Service](https://github.com/echo-xiao9/E-BookStore/tree/main/20210327_bookStoreWeb/hw/hw4)
 
-书籍的全文搜索开发并部署成 Web Service，同一个URL使用不同的参数访问。实现了接口是对数据而不是操作定义的restful的web service。
+Full-text search of books is developed and deployed as a Web Service, accessed by the same URL using different parameters. The interface is implemented as a restful web service defined for data rather than operations.
 
 #### [microservice](https://github.com/echo-xiao9/E-BookStore/tree/main/20210327_bookStoreWeb/hw/hw5)
 
-使用 Eureka Server 和 Eureka Client 构建 SpringBoot 微服务架构，通过将功能分解到各个离散的服务中以实现解耦，并使用 Netflix-Zuul 进行路由，实现负载均衡。
+Build a SpringBoot microservice architecture using Eureka Server and Eureka Client, decoupled by decomposing functionality into discrete services, and load balanced using Netflix-Zuul for routing.
 
 #### [MongoDB](https://github.com/echo-xiao9/E-BookStore/tree/main/20210327_bookStoreWeb/hw/hw8)
 
-将书籍图片信息转换成 base64 字符串存入 MongoDB 数据库，增加了项目可移植性。
+Convert book image information into base64 strings to MongoDB database, increasing project portability.
 
 #### [Neo4j](https://github.com/echo-xiao9/E-BookStore/tree/main/20210327_bookStoreWeb/hw/hw8)
 
-为书籍添加多个标签，使用 Neo4j 数据库存储标签类型和相互关联性，使得用户可以根据标签模糊搜索含有相邻标签的书籍。
+Add multiple tags to a book, using the Neo4j database to store tag types and interconnections, allowing users to fuzzy search for books containing adjacent tags based on tags.
 
 #### [InfluxDB](https://github.com/echo-xiao9/E-BookStore/tree/main/20210327_bookStoreWeb/hw/hw9)
 
-实时监控电脑的CPU各个核，disk各个盘等运行状态。
+Real-time monitoring of the running status of each CPU core, each disk, etc. of a computer.
 
 #### [Nginx](https://github.com/echo-xiao9/E-BookStore/tree/main/20210327_bookStoreWeb/hw/hw10)
 
-负载均衡，处理高并发。
+Load balancing to handle high concurrency.
 
 #### [Docker](https://github.com/echo-xiao9/E-BookStore/tree/main/20210327_bookStoreWeb/hw/hw10)
 
-容器化部署，即负载均衡器nginx、缓存redis、服务集群tomcat都在docker容器中部署。 
+Containerized deployment, i.e. load balancer nginx, cache redis, and service cluster tomcat are deployed in docker containers. 
 
 #### [Hadoop MapReduce](https://github.com/echo-xiao9/E-BookStore/tree/main/20210327_bookStoreWeb/hw/hw11)
 
-使用hadoop MapReduce 框架统计图书简介中上述每个关键词出现的次数。
-
+Use the hadoop MapReduce framework to count the number of occurrences of each of the above keywords in the book introduction.
+ Translated with www.DeepL.com/Translator (free version)

@@ -8,8 +8,7 @@ import com.reins.bookstore.repository.OrderItemRepository;
 import com.reins.bookstore.repository.OrderRepository;
 
 import com.reins.bookstore.repository.UserRepository;
-import com.reins.bookstore.utils.RedisUtil;
-import org.aspectj.weaver.ast.Or;
+import com.reins.bookstore.utils.redis.RedisUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Propagation;

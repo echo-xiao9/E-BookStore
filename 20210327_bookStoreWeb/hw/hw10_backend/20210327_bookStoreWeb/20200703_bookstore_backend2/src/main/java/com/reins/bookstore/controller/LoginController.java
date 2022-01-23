@@ -7,11 +7,14 @@ import com.reins.bookstore.utils.msgutils.Msg;
 import com.reins.bookstore.utils.msgutils.MsgCode;
 import com.reins.bookstore.utils.msgutils.MsgUtil;
 import com.reins.bookstore.utils.sessionutils.SessionUtil;
+import lombok.extern.slf4j.Slf4j;
 import net.sf.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.web.bind.annotation.*;
 
 
+import javax.servlet.http.HttpSession;
 import java.util.List;
 import java.util.Map;
 
@@ -22,11 +25,13 @@ import java.util.Map;
  *@Author thunderBoy
  *@Date 2019-11-05 15:09
  */
+@Slf4j
 @RestController
 public class LoginController {
 
     @Autowired
     private UserService userService;
+    private StringRedisTemplate redisTemplate;
 
 
     /**
@@ -35,70 +40,51 @@ public class LoginController {
      * @return: Msg
      * @Author: thunderBoy
      */
-//    @GetMapping("/login")
-//
-//    //public Msg login(@RequestParam(Constant.USERNAME) String username, @RequestParam(Constant.PASSWORD) String password, @RequestParam(Constant.REMEMBER_ME) Boolean remember){
-//    public Msg login(@RequestParam Map<String, String> params){
+    @Autowired
+    public LoginController(StringRedisTemplate redisTemplate, UserService userService){
+        this.redisTemplate = redisTemplate;
+        this.userService = userService;
+    }
+
+    @GetMapping("/login")
+    public Msg login(@RequestParam("username") String username, @RequestParam("password") String password,HttpSession session){
+        log.info("login. Current session id: {}", session.getId());
 //        String username = params.get(Constant.USERNAME);
 //        String password = params.get(Constant.PASSWORD);
-//
-
-    @GetMapping("/login") /*检查是否能进入首页*/
-    public Msg login(
-            @RequestParam (required = false) String username,
-            @RequestParam (required = false) String password
-            ) {
         UserAuth auth = userService.checkUser(username, password);
         if(auth != null){
-            JSONObject obj = new JSONObject();
-            obj.put(Constant.USER_ID, auth.getUserId());
-            obj.put(Constant.USERNAME, auth.getUsername());
-            obj.put(Constant.USER_TYPE, auth.getUserType());
-            obj.put(Constant.PASSWORD, auth.getPassword());
-            System.out.println(auth.getPassword());
-            SessionUtil.setSession(obj);
-            JSONObject data = JSONObject.fromObject(auth);
-            data.remove(Constant.PASSWORD);
-            return MsgUtil.makeMsg(MsgCode.SUCCESS, MsgUtil.LOGIN_SUCCESS_MSG, data);
-        }
-        else{
+            session.setAttribute("username", username);
+            redisTemplate.opsForValue().set(String.format("username:%s", username), session.getId());
+            return MsgUtil.makeMsg(MsgCode.SUCCESS, MsgUtil.LOGIN_SUCCESS_MSG, null);
+        }else{
             return MsgUtil.makeMsg(MsgCode.LOGIN_USER_ERROR);
         }
     }
 
+@GetMapping("/logout")
+public Msg logout(HttpSession session){
+    log.info("current session id: {}", session.getId());
+    session.invalidate();
+    return MsgUtil.makeMsg(MsgCode.SUCCESS, MsgUtil.LOGOUT_SUCCESS_MSG);
+}
 
-
-
-
-
-
-
-    @RequestMapping("/logout")
-    public Msg logout(){
-        Boolean status = SessionUtil.removeSession();
-
-        if(status){
-            return MsgUtil.makeMsg(MsgCode.SUCCESS, MsgUtil.LOGOUT_SUCCESS_MSG);
-        }
-        return MsgUtil.makeMsg(MsgCode.ERROR, MsgUtil.LOGOUT_ERR_MSG);
-    }
-
-    /**
-     * @Description: getSession
-     * @Param: null
-     * @return: Msg
-     * @Author: thunderBoy
-     */
     @RequestMapping("/checkSession")
-    public Msg checkSession(){
-        JSONObject auth = SessionUtil.getAuth();
-
-//        if(auth == null){
-//            return MsgUtil.makeMsg(MsgCode.NOT_LOGGED_IN_ERROR);
-//        }
-//        else{
-//            return MsgUtil.makeMsg(MsgCode.SUCCESS, MsgUtil.LOGIN_SUCCESS_MSG, auth);
-//        }
-        return MsgUtil.makeMsg(MsgCode.SUCCESS, MsgUtil.LOGIN_SUCCESS_MSG, auth);
+    public Msg checkSession(HttpSession session){
+        log.info("checkSession. Current session id: {}", session.getId());
+        String currentSessionId = session.getId();
+        String username = (String) session.getAttribute("username");
+        if(username == null){
+            log.info("checkSession. Username is null");
+        }else{
+            String loginSessionId = redisTemplate.opsForValue().get(String.format("username:%s", username));
+            if(loginSessionId != null && loginSessionId.equals(currentSessionId)){
+                log.info("checkSession success");
+                return MsgUtil.makeMsg(MsgCode.SUCCESS, MsgUtil.LOGIN_SUCCESS_MSG, null);
+            }else{
+                log.info("checkSession failed");
+            }
+        }
+        return MsgUtil.makeMsg(MsgCode.NOT_LOGGED_IN_ERROR, MsgUtil.NOT_LOGGED_IN_ERROR_MSG);
     }
 }
+

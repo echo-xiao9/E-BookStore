@@ -126,11 +126,9 @@ public class WordCount2 {
         Job job = Job.getInstance(conf, "word count");
         job.setJarByClass(WordCount2.class);
         job.setMapperClass(TokenizerMapper.class);
-        job.setCombinerClass(IntSumReducer.class);
         job.setReducerClass(IntSumReducer.class);
         job.setOutputKeyClass(Text.class);
         job.setOutputValueClass(IntWritable.class);
-        job.setNumReduceTasks(2);
         List<String> otherArgs = new ArrayList<String>();
         for (int i=0; i < remainingArgs.length; ++i) {
             if ("-keywords".equals(remainingArgs[i])) {

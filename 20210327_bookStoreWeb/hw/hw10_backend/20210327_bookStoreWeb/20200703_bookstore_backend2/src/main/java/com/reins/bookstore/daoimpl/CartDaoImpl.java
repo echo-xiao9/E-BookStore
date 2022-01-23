@@ -4,7 +4,7 @@ import com.alibaba.fastjson.JSONArray;
 import com.reins.bookstore.dao.CartDao;
 import com.reins.bookstore.entity.Cart;
 import com.reins.bookstore.repository.CartRepository;
-import com.reins.bookstore.utils.RedisUtil;
+import com.reins.bookstore.utils.redis.RedisUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Propagation;

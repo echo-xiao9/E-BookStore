@@ -1,4 +1,4 @@
-package com.reins.bookstore.utils;
+package com.reins.bookstore.utils.redis;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
